@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f2f6d0;
+  --accent-color: #d98324;
+  --background-color: #443627;
+}
+
+.main {
+  display: flex;
+  background-color: var(--background-color);
+}
+#container {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  flex: 3;
+  padding: 3rem;
+}
+.form-container {
+  flex: 1;
+  background-color: var(--primary-color);
+  padding: 0 3rem;
+  height: 100vh;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+form div {
+  margin: 4rem 0;
+}
+
+form div label {
+  font-size: 1.3rem;
+}
+
+form div input[type='text'],
+form div input[type='number'] {
+  margin-top: 2rem;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+form div button {
+  font-size: 1.3rem;
+  border-radius: 0.8rem;
+  padding: 1rem 4rem;
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+h1 {
+  color: var(--accent-color);
+}
+label {
+  color: var(--accent-color);
+}
+
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+  outline: none;
+}
+
+button {
+  background-color: #d98324;
+  border: none;
+  color: white;
+}
+/* .book-is-Read::before {
+  color: red;
+  content: 'Check';
+} */
+
+input[type='checkbox'] {
+  appearance: none;
+  cursor: pointer;
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+  border: 2px solid var(--accent-color);
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--accent-color);
+}
+
+input[type='checkbox']:checked::after {
+  font-family: 'Material Symbols Outlined';
+  color: white;
+  content: 'check';
+}
+input[type='checkbox'] + label {
+  vertical-align: middle;
+}
+
+.book-tracker-container {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.book-tracker-container span {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.book-tracker-container button {
+  font-size: 1.1rem;
+  padding: 0.6rem 4rem;
+  border-radius: 0.5rem;
+  vertical-align: top;
+}
+.book-tracker-container button:hover {
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 1rem;
+  border-bottom: 5px solid var(--accent-color);
+  font-size: 1.3rem;
+}
+
+#rows td {
+  color: var(--primary-color);
+}
+.book-title,
+.book-author,
+.book-is-Read,
+.book-page-number,
+.book-is-Unread {
+  text-align: center;
+}
+
+.book-is-Read {
+  content: ' ';
+}
+
+.book-is-Read::after {
+  font-family: 'Material Symbols Outlined';
+  color: greenyellow;
+  content: 'check';
+}
+
+.book-is-Unread::after {
+  font-family: 'Material Symbols Outlined';
+  color: grey;
+  content: 'x';
+}
+thead tr th {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}

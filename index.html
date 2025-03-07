@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check"
+    />
+    <link rel="stylesheet" href="assets/normalize.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <!-- <div class="main">
+      <div class="form-container">
+        <h1>Library</h1>
+        <form id="form" action="#" method="post">
+          <div>
+            <label for="title"> What is the title of the book?</label>
+            <input type="text" id="title" />
+            <div class="line"></div>
+          </div>
+          <div>
+            <label for="author">Who is the author of the book?</label>
+            <input type="text" id="author" />
+          </div>
+          <div>
+            <label for="pageNumber">How many pages are in the book?</label>
+            <input type="number" id="pageNumber" />
+          </div>
+          <div>
+            <label for="isRead">I have already read this book!</label>
+            <input type="checkbox" name="isRead" id="isRead" />
+          </div>
+          <button type="submit" id="submit">Add a new book</button>
+        </form>
+      </div>
+
+      <div id="container"></div>
+    </div> -->
+
+    <div class="main">
+      <div class="form-container">
+        <h1>Library</h1>
+        <form id="form" action="#" method="post">
+          <div>
+            <label for="title"> What is the title of the book?</label>
+            <input type="text" id="title" />
+            <div class="line"></div>
+          </div>
+          <div>
+            <label for="author">Who is the author of the book?</label>
+            <input type="text" id="author" />
+          </div>
+          <div>
+            <label for="pageNumber">How many pages are in the book?</label>
+            <input type="number" id="pageNumber" />
+          </div>
+          <div>
+            <input type="checkbox" name="isRead" id="isRead" />
+            <label for="isRead">I have already read this book!</label>
+          </div>
+          <div class="btn-container">
+            <button type="submit" id="submit">Add a new book</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="container">
+        <div class="book-tracker-container">
+          <span>Books Read: <span id="books-read"></span> </span>
+          <span>Books Unread: <span id="books-unread"></span></span>
+          <span>Total Books: <span id="total-books"></span> </span>
+          <button id="deleteAllBtn">Delete All</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
