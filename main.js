@@ -137,6 +137,7 @@ function showBooks() {
     let authorCell = document.createElement('td')
     let pageNumberCell = document.createElement('td')
     let isReadCell = document.createElement('td')
+    let deleteBook = document.createElement('td')
 
     let currentTitle = myLibrary[i].title
     let currentAuthor = myLibrary[i].author
@@ -145,7 +146,6 @@ function showBooks() {
 
     isReadCell.addEventListener('click', (e) => {
       e.preventDefault()
-
       if (currentIsRead) {
         currentIsRead = false
         myLibrary[i].isRead = currentIsRead
@@ -153,12 +153,18 @@ function showBooks() {
         currentIsRead = true
         myLibrary[i].isRead = currentIsRead
       }
-
       bookReadChecker(myLibrary)
       showBooks()
     })
 
-    // newRow.classList.add('card')
+    deleteBook.addEventListener('click', (e) => {
+      e.preventDefault()
+      //deletes 1 item at index i
+      myLibrary.splice(i, 1)
+      bookReadChecker(myLibrary)
+      showBooks()
+    })
+
     titleCell.classList.add('book-title')
     authorCell.classList.add('book-author')
     pageNumberCell.classList.add('book-page-number')
@@ -167,16 +173,19 @@ function showBooks() {
     } else {
       isReadCell.classList.add('book-is-Unread')
     }
+    deleteBook.classList.add('delete-book')
 
     titleCell.innerHTML = currentTitle
     authorCell.innerHTML = currentAuthor
     pageNumberCell.innerHTML = currentPageNumber
     isReadCell.textContent = ''
+    deleteBook.textContent = ''
 
     newRow.append(titleCell)
     newRow.append(authorCell)
     newRow.append(pageNumberCell)
     newRow.append(isReadCell)
+    newRow.append(deleteBook)
 
     rows.appendChild(newRow)
   }

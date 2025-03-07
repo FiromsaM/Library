@@ -151,25 +151,51 @@ th {
 .book-author,
 .book-is-Read,
 .book-page-number,
-.book-is-Unread {
+.book-is-Unread,
+.delete-book {
   text-align: center;
 }
 
-.book-is-Read {
+.book-is-Read,
+.book-is-Unread,
+.delete-book {
   content: ' ';
+  vertical-align: middle;
+  padding: 10px 20px;
+}
+.delete-book {
+  content: 'delete';
+}
+.book-is-Read::after,
+.book-is-Unread::after,
+.delete-book::after {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.5rem;
 }
 
 .book-is-Read::after {
-  font-family: 'Material Symbols Outlined';
   color: greenyellow;
   content: 'check';
 }
 
 .book-is-Unread::after {
-  font-family: 'Material Symbols Outlined';
   color: grey;
   content: 'x';
 }
+
+.delete-book::after {
+  font-family: 'Material Symbols Outlined';
+
+  color: rgb(243, 93, 93);
+  content: 'delete';
+}
+
+.book-is-Read:hover,
+.book-is-Unread:hover,
+.delete-book:hover {
+  cursor: pointer;
+}
+
 thead tr th {
   background-color: var(--primary-color);
   color: var(--background-color);
